@@ -9,7 +9,7 @@ on:
 jobs:
   Bump-version:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    if: github.event.pull_request.merged == true && github.repository == 'fragiletech/ml-ops-quickstart'
     steps:
     - uses: actions/checkout@v2
     - name: Setup Python
